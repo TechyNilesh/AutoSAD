@@ -1,5 +1,4 @@
-# AutoSAD
-An Adaptive Framework for Streaming Anomaly Detection
+# AutoSAD - An Adaptive Framework for Streaming Anomaly Detection
 
 ## Overview
 
