@@ -1,0 +1,1 @@
+ArrayBase<OwnedRepr<f64>, Dim<[usize; 1]>>: OkWrap<ArrayBase<OwnedRepr<f64>, Dim<[usize; 1]>>>

@@ -1,0 +1,18 @@
+[package]
+name = "pysad_rust"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "pysad_rust"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.18", features = ["extension-module"] }
+num_cpus = "1"
+numpy = "0.18"
+ndarray = "0.15"
+rand = "0.8"
+rayon = "1.8"
+isolation_forest = "1.1.0"
+linfa = "0.7"
