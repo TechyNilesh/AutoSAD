@@ -115,56 +115,6 @@ The following table describes the key datasets used in our experiments:
 | Bank        | 41,188        | 10             | 4,640           | 11.27%        | Finance      |
 | U2R         | 60,821        | 6              | 228             | 0.37%         | Network      |
 
-### Dataset Categories
-- **Network Security**: Backdoor, Http, Smtp, Prob, U2R
-- **Finance**: Campaign, Fraud, Bank
-- **Image Processing**: ALOI, Celeba, Skin
-- **Sociology**: Census, Donors
-- **Scientific**: Cover (Botany), Shuttle (Astronautics)
-- **Games**: Chess
-
-### Dataset Characteristics
-
-#### Small Datasets (< 50k samples)
-Suitable for quick testing and algorithm comparison:
-- ALOI (49,534 samples)
-- Shuttle (49,097 samples)
-- Chess (28,056 samples)
-- Bank (41,188 samples)
-- Campaign (41,188 samples)
-
-#### Medium Datasets (50k - 300k samples)
-Good for comprehensive evaluation:
-- Backdoor (95,329 samples)
-- Smtp (95,156 samples)
-- Celeba (202,599 samples)
-- Skin (245,057 samples)
-- Fraud (284,807 samples)
-- Cover (286,048 samples)
-- Census (299,285 samples)
-
-#### Large Datasets (> 300k samples)
-Recommended for high-performance installation:
-- Http (567,498 samples) - **Use Rust version recommended**
-- Donors (619,326 samples) - **Use Rust version recommended**
-
-#### Dataset Difficulty Levels
-
-**Easy Detection** (High anomaly percentage):
-- Skin (20.75% anomalies)
-- Campaign/Bank (11.27% anomalies)
-- Shuttle (7.15% anomalies)
-
-**Medium Detection** (Moderate anomaly percentage):
-- Prob (6.43% anomalies)
-- Census (6.20% anomalies)
-- Donors (5.93% anomalies)
-
-**Hard Detection** (Low anomaly percentage):
-- Smtp (0.03% anomalies) - **Very challenging**
-- Chess (0.10% anomalies) - **Very challenging**
-- Fraud (0.17% anomalies) - **Very challenging**
-
 ### Complete Dataset List
 Available datasets include all files from `1_ALOI.npz` through `51_kddcup99_u2r.npz` covering various domains including network security, medical, image processing, financial fraud detection, and more.
 
@@ -443,8 +393,8 @@ If you use AutoSAD in your research, please cite:
 ```bibtex
 @article{autosad2024,
     title={AutoSAD: An Adaptive Framework for Streaming Anomaly Detection},
-    author={Your Name},
-    journal={Conference/Journal Name},
+    author={Anonymous},
+    journal={Anonymous},
     year={2024}
 }
 ```
