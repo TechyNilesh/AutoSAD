@@ -3,7 +3,7 @@ An Adaptive Framework for Streaming Anomaly Detection
 
 ## Overview
 
-AutoSAD is an adaptive framework designed for streaming anomaly detection. It provides an ensemble of multiple anomaly detection algorithms and automatically selects the best performing models for real-time data streams.
+AutoSAD is an adaptive framework designed for streaming anomaly detection. It provides an set of multiple anomaly detection algorithms and automatically selects the best performing models for real-time data streams.
 
 ## Features
 
