@@ -14,11 +14,9 @@ AutoSAD is an adaptive framework designed for streaming anomaly detection. It pr
   - LODA (Lightweight Online Detector of Anomalies)
   - IForestASD
   - Half-Space Trees (HST)
-  - RSHash
-  - XStream
 
 - **Comprehensive Evaluation**: Built-in evaluation metrics and performance tracking
-- **Benchmark Datasets**: Includes 51 benchmark datasets for evaluation
+- **Benchmark Datasets**: Includes 16 benchmark datasets for evaluation
 - **Parallel Execution**: Support for concurrent execution of multiple experiments
 
 ## Installation
@@ -115,7 +113,7 @@ The following table describes the key datasets used in our experiments:
 | U2R         | 60,821        | 6              | 228             | 0.37%         | Network      |
 
 ### Complete Dataset List
-Available datasets include all files from `1_ALOI.npz` through `51_kddcup99_u2r.npz` covering various domains including network security, medical, image processing, financial fraud detection, and more.
+Available datasets include all files covering various domains including network security, medical, image processing, financial fraud detection, and more.
 
 ## Usage
 
@@ -390,11 +388,11 @@ If Rust installation fails:
 If you use AutoSAD in your research, please cite:
 
 ```bibtex
-@article{autosad2024,
+@article{autosad2025,
     title={AutoSAD: An Adaptive Framework for Streaming Anomaly Detection},
     author={Anonymous},
     journal={Anonymous},
-    year={2024}
+    year={2025}
 }
 ```
 
