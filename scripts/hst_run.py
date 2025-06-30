@@ -30,7 +30,7 @@ def run_hst(dataset_name, run_count=None, seed=42, progress_interval=1000, outpu
     try:
         # Load dataset
         X, y = get_xy_from_npz("adbenchmark/" + dataset_name + ".npz")
-        X, y = shuffle(X, y, random_state=seed)
+        #X, y = shuffle(X, y, random_state=seed)
         
         # Calculate feature mins and maxes
         feature_mins = X.min(axis=0).astype(np.float64)

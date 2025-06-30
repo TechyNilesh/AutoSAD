@@ -29,7 +29,7 @@ def run_oif(dataset_name, run_count=None, seed=42, progress_interval=1000, outpu
     try:
         # Load dataset
         X, y = get_xy_from_npz("adbenchmark/" + dataset_name + ".npz")
-        X, y = shuffle(X, y, random_state=seed)
+        #X, y = shuffle(X, y, random_state=seed)
         
         # Set Online Isolation Forest parameters
         oif_params = {
