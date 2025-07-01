@@ -91,29 +91,54 @@ The project includes 51 benchmark datasets in the `adbenchmark/` directory. Each
 
 ### Main Datasets Used in Experiments
 
-The following table describes the key datasets used in our experiments:
+The following table describes the key datasets used in our experiments. All datasets are stored in `.npz` format and can be downloaded directly from the [adbenchmark folder](./adbenchmark/).
 
-| **Dataset** | **# Samples** | **# Features** | **# Anomalies** | **% Anomaly** | **Category** |
-|-------------|---------------|----------------|-----------------|---------------|--------------|
-| ALOI        | 49,534        | 27             | 1,508           | 3.04%         | Image        |
-| Backdoor    | 95,329        | 196            | 2,329           | 2.44%         | Network      |
-| Campaign    | 41,188        | 62             | 4,640           | 11.27%        | Finance      |
-| Celeba      | 202,599       | 39             | 4,547           | 2.24%         | Image        |
-| Census      | 299,285       | 500            | 18,568          | 6.20%         | Sociology    |
-| Cover       | 286,048       | 10             | 2,747           | 0.96%         | Botany       |
-| Donors      | 619,326       | 10             | 36,710          | 5.93%         | Sociology    |
-| Fraud       | 284,807       | 29             | 492             | 0.17%         | Finance      |
-| Http        | 567,498       | 3              | 2,211           | 0.39%         | Web          |
-| Shuttle     | 49,097        | 9              | 3,511           | 7.15%         | Astronautics |
-| Skin        | 245,057       | 3              | 50,859          | 20.75%        | Image        |
-| Smtp        | 95,156        | 3              | 30              | 0.03%         | Web          |
-| Chess       | 28,056        | 6              | 27              | 0.10%         | Games        |
-| Prob        | 64,759        | 6              | 4,166           | 6.43%         | Network      |
-| Bank        | 41,188        | 10             | 4,640           | 11.27%        | Finance      |
-| U2R         | 60,821        | 6              | 228             | 0.37%         | Network      |
+| **Dataset** | **Download Link** | **# Samples** | **# Features** | **# Anomalies** | **% Anomaly** | **Category** |
+|-------------|-------------------|---------------|----------------|-----------------|---------------|--------------|
+| ALOI        | [1_ALOI.npz](./adbenchmark/1_ALOI.npz) | 49,534        | 27             | 1,508           | 3.04%         | Image        |
+| Backdoor    | [3_backdoor.npz](./adbenchmark/3_backdoor.npz) | 95,329        | 196            | 2,329           | 2.44%         | Network      |
+| Campaign    | [5_campaign.npz](./adbenchmark/5_campaign.npz) | 41,188        | 62             | 4,640           | 11.27%        | Finance      |
+| Celeba      | [8_celeba.npz](./adbenchmark/8_celeba.npz) | 202,599       | 39             | 4,547           | 2.24%         | Image        |
+| Census      | [9_census.npz](./adbenchmark/9_census.npz) | 299,285       | 500            | 18,568          | 6.20%         | Sociology    |
+| Cover       | [10_cover.npz](./adbenchmark/10_cover.npz) | 286,048       | 10             | 2,747           | 0.96%         | Botany       |
+| Donors      | [11_donors.npz](./adbenchmark/11_donors.npz) | 619,326       | 10             | 36,710          | 5.93%         | Sociology    |
+| Fraud       | [13_fraud.npz](./adbenchmark/13_fraud.npz) | 284,807       | 29             | 492             | 0.17%         | Finance      |
+| Http        | [16_http.npz](./adbenchmark/16_http.npz) | 567,498       | 3              | 2,211           | 0.39%         | Web          |
+| Shuttle     | [32_shuttle.npz](./adbenchmark/32_shuttle.npz) | 49,097        | 9              | 3,511           | 7.15%         | Astronautics |
+| Skin        | [33_skin.npz](./adbenchmark/33_skin.npz) | 245,057       | 3              | 50,859          | 20.75%        | Image        |
+| Smtp        | [34_smtp.npz](./adbenchmark/34_smtp.npz) | 95,156        | 3              | 30              | 0.03%         | Web          |
+| Chess       | [48_chess.npz](./adbenchmark/48_chess.npz) | 28,056        | 6              | 27              | 0.10%         | Games        |
+| Prob        | [49_kddcup99_prob.npz](./adbenchmark/49_kddcup99_prob.npz) | 64,759        | 6              | 4,166           | 6.43%         | Network      |
+| Bank        | [50_bank.npz](./adbenchmark/50_bank.npz) | 41,188        | 10             | 4,640           | 11.27%        | Finance      |
+| U2R         | [51_kddcup99_u2r.npz](./adbenchmark/51_kddcup99_u2r.npz) | 60,821        | 6              | 228             | 0.37%         | Network      |
+
+**Dataset Format**: All datasets are stored as NumPy compressed files (`.npz`) containing:
+- `X`: Feature matrix (samples × features)
+- `y`: Binary labels (0 = normal, 1 = anomaly)
 
 ### Complete Dataset List
-Available datasets include all files covering various domains including network security, medical, image processing, financial fraud detection, and more.
+Available datasets include all files covering various domains including network security, medical, image processing, financial fraud detection, and more. 
+
+**Browse All Datasets**: [View complete adbenchmark folder](./adbenchmark/) containing all 51 datasets.
+
+**Download Instructions**:
+1. Navigate to the [adbenchmark folder](./adbenchmark/)
+2. Click on any `.npz` file to view it
+3. Click "Download" or "Raw" to download the dataset file
+4. Load in Python using: `data = np.load('dataset_name.npz'); X, y = data['X'], data['y']`
+
+**Quick Download Examples**:
+```bash
+# Download a specific dataset using wget or curl
+wget https://github.com/your-username/AutoSAD/raw/main/adbenchmark/1_ALOI.npz
+curl -L -o 1_ALOI.npz https://github.com/your-username/AutoSAD/raw/main/adbenchmark/1_ALOI.npz
+
+# Load in Python
+import numpy as np
+data = np.load('1_ALOI.npz')
+X, y = data['X'], data['y']
+print(f"Dataset shape: {X.shape}, Anomalies: {y.sum()}/{len(y)}")
+```
 
 ## Usage
 
@@ -398,4 +423,4 @@ If you use AutoSAD in your research, please cite:
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+N/A
